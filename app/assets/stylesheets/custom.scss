@@ -1,0 +1,59 @@
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing{
+  -moz-box-sizing:  border-box;
+  -webkit-box-sizing: border-box;
+  box_sizing:        border-box;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* form */
+.field {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%; 
+  padding: 6px 12px;
+  font-size: 14px;
+  @include box_sizing;
+}
+
+.rememberme {
+  width:20px !important;
+}
+
+.btn.btn-google.btn-block.btn-lg {
+  width: 100%;
+  color: #fff;
+  background-color: indianred;
+  // 文字が切れる
+  white-space: nowrap;
+  @include box_sizing;
+}

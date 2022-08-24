@@ -1,12 +1,26 @@
 <header>
+  <div container>
+    <%= link_to "trainee", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <%= link_to 'プロフィール変更', edit_user_registration_path %>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <li class="dropdoen">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account
+            </a>
+            <ul class="dropdown-menu">
+
+            </ul>
+          </li>
+          <%= link_to 'ユーザー登録', new_user_registration_path %>
+          <%= link_to 'ログイン', new_user_session_path %>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
   <nav>
-    <% if user_signed_in? %>
-      <%= link_to 'プロフィール変更', edit_user_registration_path %>
-      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to 'ユーザー登録', new_user_registration_path %>
-      <%= link_to 'ログイン', new_user_session_path %>
-      <%= link_to "Googleでログイン", user_google_oauth2_omniauth_authorize_path, method: :post %>
-    <% end %>
   </nav>
 </header>
