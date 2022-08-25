@@ -1,26 +1,17 @@
-<header>
-  <div container>
-    <%= link_to "trainee", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <%= link_to 'プロフィール変更', edit_user_registration_path %>
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-        <% else %>
-          <li class="dropdoen">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account
-            </a>
-            <ul class="dropdown-menu">
-
-            </ul>
-          </li>
-          <%= link_to 'ユーザー登録', new_user_registration_path %>
-          <%= link_to 'ログイン', new_user_session_path %>
-        <% end %>
-      </ul>
-    </nav>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <%= link_to "trainee", root_path, class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+        <%= link_to 'プロフィール変更', edit_user_registration_path, class: "nav-item nav-link" %>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-item nav-link" %>
+      <% else %>
+        <%= link_to 'ユーザー登録', new_user_registration_path, class: "nav-item nav-link"%>
+        <%= link_to 'ログイン', new_user_session_path, class: "nav-item nav-link" %>
+      <% end %>
+    </ul>
   </div>
-  <nav>
-  </nav>
-</header>
+</nav>
