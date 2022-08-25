@@ -32,6 +32,15 @@ p {
   line-height: 1.7em;
 }
 
+/* header */
+nav {
+  height: 80px;
+  margin-bottom: 30px;
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+}
+
 /* form */
 .field {
   margin-bottom: 15px;
