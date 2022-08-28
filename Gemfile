@@ -28,8 +28,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise', '>= 4.8.1'
-gem 'omniauth-google-oauth2'
-gem "omniauth-rails_csrf_protection"
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'omniauth-google-oauth2', '>= 1.0.1'
+gem "omniauth-rails_csrf_protection", '>= 1.0.1'
 
 
 group :development, :test do
