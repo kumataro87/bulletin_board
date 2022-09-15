@@ -12,8 +12,8 @@ RSpec.describe 'Test User model', type: :model do
     end
     
     it "is invalid without an email address" do
-        user = build(:user)
-        user.email = ''
+        user = build(:user, email: nil)
+        # user.email = ''
         expect(user).to be_invalid
     end
     
